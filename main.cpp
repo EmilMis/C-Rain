@@ -55,8 +55,8 @@ int main() {
 		for (int i = 0; i < nScreenWidth * nScreenHeight; i++) screen[i] = L' ';
 
 		for (auto el : rain) {
-			if (el.second - nFieldHeight >= 5)screen[(nFieldHeight)*nScreenWidth + (el.first + 2)] = L'.';
-			else if (el.second - nFieldHeight >= 0)screen[(nFieldHeight)*nScreenWidth + (el.first + 2)] = L'_';
+			if (el.second - nFieldHeight >= 4)screen[(nFieldHeight)*nScreenWidth + (el.first + 2)] = L'.';
+			else if (el.second - nFieldHeight >= -1)screen[(nFieldHeight)*nScreenWidth + (el.first + 2)] = L'_';
 			else screen[(el.second + 2) * nScreenWidth + (el.first + 2)] = L'|';
 		}
 
